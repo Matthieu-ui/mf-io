@@ -15,17 +15,14 @@ import {
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
 
-import About from "./About";
-
 class cardContent extends Component {
   render() {
     return (
       <div className="mfio-card">
-  
         <div className="avi">
-        <GlassCard />
+          <GlassCard />
         </div>
-        
+
         <div className="skillBase">
           <i>
             <FontAwesomeIcon className="icons" icon={faHtml5}></FontAwesomeIcon>
@@ -51,7 +48,6 @@ class cardContent extends Component {
             <FontAwesomeIcon className="icons" icon={faApple}></FontAwesomeIcon>
           </i>
         </div>
-        <About />
 
         <div className="links">
           <ul>
@@ -65,6 +61,10 @@ class cardContent extends Component {
               <FontAwesomeIcon icon={faFolderOpen}></FontAwesomeIcon>
             </li>
           </ul>
+          <div className="cardFooter">
+            <p>Email - GitHub - Projects</p>
+            <p>MatthieuFelker.io</p>
+          </div>
         </div>
       </div>
     );

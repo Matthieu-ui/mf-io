@@ -39,7 +39,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 100px;
+  top: 2em;
   z-index: 1;
 
 }
@@ -103,22 +103,28 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.cardFooter{
+  font-size: 10px;
+}
 .footer {
-  border-top: 1px solid #9fb3d444;
-  flex-shrink: 0;
-  margin: auto;
-  position: absolute;
-  bottom: -330px;
-  left: 0;
-  right: 0;
-  color: white;
-  text-align: center;
+  
+  border-top: rgba(204, 204, 204, 0.26) 1px solid;
+  padding-top: 1em;
   width: 50%;
-  padding: 1em;
-  height: 60px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 50%;
+  height: auto;
+  color: #bbb;
+  right: 0;
+  margin: 0 auto;
+  
 }
 
 .footerIcon {
+  
   font-size: large;
   margin-left: 3px;
   line-height: 1px;
@@ -144,7 +150,7 @@
 
 @media (min-width: 400px) {
   .avi {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -152,7 +158,7 @@
 
 @media (min-width: 550px) {
   .avi {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -309,6 +315,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
   background-color: grey;
+   min-height: 100%;
 }
 
 body {
@@ -318,10 +325,10 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   background-color: #0a1625;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.342) 0 0 3px 3px;
-  height: 149vh;
+  min-height: 100vh;
 }
 
 /* Typography
@@ -400,7 +407,67 @@ h6 {
 p {
   margin-top: 0;
 }
+/* pop up*/
+.content{
+ float: left;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
 
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -608,6 +675,7 @@ li {
   padding: 0.5em;
   margin: auto;
   width: 70%;
+  margin-bottom: -1em;
 }
 
 /* Code
@@ -673,7 +741,7 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Utilities
