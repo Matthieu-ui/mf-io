@@ -12,7 +12,7 @@ function App() {
         <div className="container">
           <div className="layer1">
             <div className="row">
-              <div className="four columns">
+              <div className="one-half column">
                 <Card />
               </div>
             </div>

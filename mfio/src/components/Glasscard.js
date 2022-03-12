@@ -6,7 +6,7 @@ import { useSpring, animated, config } from 'react-spring';
 const Container = styled(animated.div)`
 display: inline-block;
 border-radius: 3px;
-padding: 3px;
+padding: 1em;
 z-index: 1;
 background-color: #dbebff10;
 position: relative;
@@ -14,6 +14,8 @@ backdrop-filter: blur(10px);
 border: 2px solid transparent;
 background-clip: border-box;
 cursor: pointer;
+box-shadow: inset rgba(209, 209, 209, 0.1) 0 0 30px 10px;
+}
 
 `;
 
@@ -49,6 +51,9 @@ const GlassCard = () => {
           <p>
             <strong>Matthieu</strong> Felker
           </p>
+          <div className="title">
+          <p>Web Developer and Graphic Artist</p>
+        </div>
         </div>
       
         </Container>

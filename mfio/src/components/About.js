@@ -13,11 +13,10 @@ class About extends React.Component {
       <div className="About">
         {this.state.showMessage && (
           <p>
-            I am a current student at Seattle Central College! On the verge of
-            starting a career in <b>Web Development</b>. -- I love to create
-            things and learn! When I am not doing that I enjoy quality time with
-            my dogs, bird, and plants... Or you might catch me watching movies,
-            playing computer games, or exploring places I have never been. If
+            I am a current student at Seattle Central College. Eager to
+            start a career in <b>Web Development</b>. I like experimenting with user interfaces and design, but I've learned web development goes much deeper than that, which also interests me. --I love to create
+            things and learn! I also enjoy quality time with
+            my dogs, bird, and plants!! If
             you wish to contact me - try my links below.
           </p>
         )}

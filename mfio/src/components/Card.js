@@ -25,11 +25,7 @@ class cardContent extends Component {
         <div className="avi">
         <GlassCard />
         </div>
-
-
-        <div className="title">
-          <p>Web Developer and Graphic Artist</p>
-        </div>
+        
         <div className="skillBase">
           <i>
             <FontAwesomeIcon className="icons" icon={faHtml5}></FontAwesomeIcon>
