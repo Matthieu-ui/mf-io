@@ -1,7 +1,9 @@
 import React from "react";
 import "../src/css/skeleton.css";
-import Card from './compenents/Card';
-import Footer from "./compenents/Footer";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
+
+
 
 function App() {
   return (

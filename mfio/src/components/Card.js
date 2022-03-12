@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import GlassCard from "./Glasscard";
 import { faEnvelope, faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -11,7 +12,7 @@ import {
   faNodeJs,
   faLinux,
   faWindows,
-  faApple
+  faApple,
 } from "@fortawesome/free-brands-svg-icons";
 
 import About from "./About";
@@ -20,15 +21,12 @@ class cardContent extends Component {
   render() {
     return (
       <div className="mfio-card">
-        <img
-          className="avi"
-          src="https://avatars.githubusercontent.com/u/77665167?v=4"
-        ></img>
-        <div className="name-plate">
-          <p>
-            <strong>Matthieu</strong> Felker
-          </p>
+  
+        <div className="avi">
+        <GlassCard />
         </div>
+
+
         <div className="title">
           <p>Web Developer and Graphic Artist</p>
         </div>
@@ -36,11 +34,23 @@ class cardContent extends Component {
           <i>
             <FontAwesomeIcon className="icons" icon={faHtml5}></FontAwesomeIcon>
             <FontAwesomeIcon className="icons" icon={faCss3}></FontAwesomeIcon>
-            <FontAwesomeIcon className="icons" icon={faJsSquare}></FontAwesomeIcon>
+            <FontAwesomeIcon
+              className="icons"
+              icon={faJsSquare}
+            ></FontAwesomeIcon>
             <FontAwesomeIcon className="icons" icon={faReact}></FontAwesomeIcon>
-            <FontAwesomeIcon className="icons" icon={faNodeJs}></FontAwesomeIcon>
-            <FontAwesomeIcon className="icons" icon={faPython}></FontAwesomeIcon>
-            <FontAwesomeIcon className="icons" icon={faWindows}></FontAwesomeIcon>
+            <FontAwesomeIcon
+              className="icons"
+              icon={faNodeJs}
+            ></FontAwesomeIcon>
+            <FontAwesomeIcon
+              className="icons"
+              icon={faPython}
+            ></FontAwesomeIcon>
+            <FontAwesomeIcon
+              className="icons"
+              icon={faWindows}
+            ></FontAwesomeIcon>
             <FontAwesomeIcon className="icons" icon={faLinux}></FontAwesomeIcon>
             <FontAwesomeIcon className="icons" icon={faApple}></FontAwesomeIcon>
           </i>
