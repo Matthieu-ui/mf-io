@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <body>
+        <main>
         <div className="container">
           <div className="row">
             <div className="one-half column">
@@ -21,6 +22,7 @@ function App() {
             </div>
           </div>
         </div>
+        </main>
       </body>
     </div>
   );
