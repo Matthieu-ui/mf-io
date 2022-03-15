@@ -14,6 +14,7 @@ import {
   faWindows,
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
+import {Link} from "react-router-dom";
 
 class cardContent extends Component {
   render() {
@@ -51,14 +52,16 @@ class cardContent extends Component {
 
         <div className="links">
           <ul>
+          
             <li className="clinks">
-              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+            <Link to="mailto:Mattfelker206@outlook.com"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></Link>
             </li>
             <li className="clinks">
-              <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+              <Link to="https://github.com/Matthieu-ui"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></Link>
+              
             </li>
             <li className="clinks">
-              <FontAwesomeIcon icon={faFolderOpen}></FontAwesomeIcon>
+              <Link to="/Projects"><FontAwesomeIcon icon={faFolderOpen}></FontAwesomeIcon></Link>     
             </li>
           </ul>
           <div className="cardFooter">
