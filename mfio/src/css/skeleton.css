@@ -1,100 +1,440 @@
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
+* {
+  margin: 0;
+  padding: 0;
 
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  position: relative;
+  height: 10vh;
+  background-color: #333;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+
+  background-color: #333;
+  transition: all ease-in 0.3s;
+  transform: translateX(200%);
+  z-index: 99999;
+  border-bottom: 1px solid white;
+}
+
+
+.nav-links li {
+  list-style: none;
+  /* opacity: 0; */
+  transition: all 1s linear;
+  transform: translateX(0);
+}
+
+.nav-links a {
+  color: #ffffff;
+  letter-spacing: 3px;
+  text-decoration: none;
+  line-height: 10px;
+}
+
+.burger {
+  /* display: none; */
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: all 0.1s linear;
+}
+
+.open-item {
+  animation-name: anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.open {
+  transform: translateX(0%);
+}
+
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-main{
-  height: 110vh;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.mfio-card {
-  color: #bbb;
-  background-color: #15273f;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+
+p {
+  color: white;
+}
+
+.headerTitle {
+  color: white;
+  float: right;
   padding: 1em;
-  width: -moz-fit-content;
-  width: 350px;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 2em;
-  z-index: 1;
+  margin: 0 auto;
 
 }
 
-.avi {
-
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: inset rgba(0, 0, 0, 0.342) 0 0 20px 10px;
-  border-radius: 4px;
-  padding: 1em;
+.loveMatt {
+  float: right;
 }
 
-.name-plate {
-  border-top: rgba(204, 204, 204, 0.26) 1px solid;
-  text-align: center;
-}
-
-.name-plate p {
-  margin-top: 0.5em;
-  font-size: larger;
-}
-
-.title p {
-  text-align: center;
-  font-size: smaller;
-  margin-top: 1em;
-}
-
-.skillBase {
-  text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.icons {
-  margin: 0.2em;
-  font-size: 24px;
-}
-
-.icons:hover {
-  color: rgb(145, 145, 145);
-}
-.About {
-  text-align: center;
-}
-
-.About p {
-  text-justify: auto;
-  background-color: #2c476a;
-  padding: 1em;
-  border-radius: 4px;
+.footOne{
   font-size: small;
-  box-shadow: rgba(0, 0, 0, 0.145) 0 0 10px 4px;
+  margin-top: 1em;
+  margin-bottom: -17px;
+}
+
+.footerIcon{
+  font-size:20px;
+
+}
+
+
+
+.clinks{
+  padding: 1em;
+  font-size:20px;
+
+  
+}
+.header {
+  background-color: #333;
+  position: absolute;
+  z-index: 1;
+  width: -moz-available;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #fff;
+  height: 109px;
+}
+
+
+
+.artHeader {
+  margin-top: 17em;
+
+}
+
+.portfolioMenu {
+  text-align: center;
+
+
+
+}
+
+.portfolioMenu a {
+  padding: 1em;
+
+
+}
+
+.portfolioMenu a:hover {
+  color: rgba(255, 255, 255, 0.671);
+  text-decoration: underline;
+  transition: 1s ease;
+
+}
+
+
+
+
+.card-item {
+  width: 90%;
+  filter: brightness(20);
+  margin: auto;
+  display: block;
+
+
+
+}
+
+
+.nav {
+  margin: 4px;
+
+}
+
+.navBar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  margin: auto;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin: auto 0;
+}
+
+
+.navLink {
+  transition: .50s ease;
+  text-decoration: none;
+  padding: 2vw;
+}
+
+.navLink:hover {
+  color: rgba(255, 255, 255, 0.671);
+  text-decoration: underline;
+
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  float: right;
+  padding: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+#peaceSign {
+  width: 30%;
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  background-color: white;
+  border: .5px solid #333;
+  box-shadow: 0 0 9px 0px;
+
+}
+
+.aviBox{
+  margin: 0 auto;
+  display: table;
+  
+
+}
+
+.mattAvitar{
+  max-width: 100%;
+  min-width: 200px;
+
+}
+
+.main {
+
+  padding: 2em;
+  margin: auto 0;
+
+}
+
+
+.mainContainer{
+  text-align: left;
+  width: 100%;
+
+}
+
+
+
+.mainText{
+
+  width: 100%;
+  display:block;
+  margin: auto;
+}
+
+
+
+
+@media(max-width:768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(230deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navMenu {
+    width: 100%;
+    position: absolute;
+    left: -120%;
+    margin: 0 auto;
+    gap: 0;
+    flex-direction: column;
+    background-color: #333;
+    text-align: center;
+    transition: 0.3s;
+    border-bottom: 1px solid #fff;
+
+
+  }
+
+
+  .navItem {
+    margin: 16px 0;
+
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+
+
+
+}
+
+
+.gridSection {
+  background-color: #333;
+  background-size: 90px 90px;
+  height: fit-content;
+  background-position: center;
+  background-image:
+    linear-gradient(to right, rgba(128, 128, 128, 0.129) 1px, transparent 1px),
+    linear-gradient(to top, rgba(128, 128, 128, 0.129) 1px, transparent 1px);
+
+}
+
+
+#mainer {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+
+aside {
+  float: right;
+  width: 50%;
+  font-size: smaller;
+ 
+
 }
 
 .container {
@@ -106,44 +446,6 @@ main{
   box-sizing: border-box;
 }
 
-.cardFooter{
-  font-size: 10px;
-}
-.footer {
-  
-  border-top: rgba(204, 204, 204, 0.26) 1px solid;
-  padding-top: 1em;
-  width: 50%;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 50%;
-  height: auto;
-  color: #bbb;
-  right: 0;
-  margin: 0 auto;
-  height: 0;
-  
-}
-
-.footerIcon {
-  
-  font-size: large;
-  margin-left: 3px;
-  line-height: 1px;
-  vertical-align: middle;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 100%, 88%);
-  text-decoration: none;
-}
-
 .column,
 .columns {
   width: 100%;
@@ -151,192 +453,261 @@ main{
   box-sizing: border-box;
 }
 
+
+
+/* For devices larger than 400px */
 @media (min-width: 400px) {
-  .avi {
-    width: 100%;
+  .container {
+    width: 85%;
+    padding: 0;
   }
-}
 
-/* Larger than phablet (also point when grid becomes active) */
 
-@media (min-width: 550px) {
-  .avi {
-    width: 100%;
-  }
-}
-
-/* Larger than tablet */
-
-@media (min-width: 750px) {
-  .avi {
-    width: 100%;
-  }
-}
-
-/* Larger than desktop */
-
-@media (min-width: 1000px) {
-}
-
-/* Larger than Desktop HD */
-
-@media (min-width: 1200px) {
 }
 
 /* For devices larger than 550px */
-
 @media (min-width: 550px) {
+
+
   .container {
     width: 80%;
   }
+
   .column,
   .columns {
     margin-left: 4%;
   }
+
   .column:first-child,
   .columns:first-child {
     margin-left: 0;
   }
+
   .one.column,
   .one.columns {
     width: 4.66666666667%;
   }
+
   .two.columns {
     width: 13.3333333333%;
   }
+
   .three.columns {
     width: 22%;
   }
+
   .four.columns {
     width: 30.6666666667%;
   }
+
   .five.columns {
     width: 39.3333333333%;
   }
+
   .six.columns {
     width: 48%;
   }
+
   .seven.columns {
     width: 56.6666666667%;
   }
+
   .eight.columns {
     width: 65.3333333333%;
   }
+
   .nine.columns {
-    width: 74%;
+    width: 74.0%;
   }
+
   .ten.columns {
     width: 82.6666666667%;
   }
+
   .eleven.columns {
     width: 91.3333333333%;
   }
+
   .twelve.columns {
     width: 100%;
     margin-left: 0;
   }
+
   .one-third.column {
     width: 30.6666666667%;
   }
+
   .two-thirds.column {
     width: 65.3333333333%;
   }
+
   .one-half.column {
     width: 48%;
   }
+
   /* Offsets */
   .offset-by-one.column,
   .offset-by-one.columns {
     margin-left: 8.66666666667%;
   }
+
   .offset-by-two.column,
   .offset-by-two.columns {
     margin-left: 17.3333333333%;
   }
+
   .offset-by-three.column,
   .offset-by-three.columns {
     margin-left: 26%;
   }
+
   .offset-by-four.column,
   .offset-by-four.columns {
     margin-left: 34.6666666667%;
   }
+
   .offset-by-five.column,
   .offset-by-five.columns {
     margin-left: 43.3333333333%;
   }
+
   .offset-by-six.column,
   .offset-by-six.columns {
     margin-left: 52%;
   }
+
   .offset-by-seven.column,
   .offset-by-seven.columns {
     margin-left: 60.6666666667%;
   }
+
   .offset-by-eight.column,
   .offset-by-eight.columns {
     margin-left: 69.3333333333%;
   }
+
   .offset-by-nine.column,
   .offset-by-nine.columns {
-    margin-left: 78%;
+    margin-left: 78.0%;
   }
+
   .offset-by-ten.column,
   .offset-by-ten.columns {
     margin-left: 86.6666666667%;
   }
+
   .offset-by-eleven.column,
   .offset-by-eleven.columns {
     margin-left: 95.3333333333%;
   }
+
   .offset-by-one-third.column,
   .offset-by-one-third.columns {
     margin-left: 34.6666666667%;
   }
+
   .offset-by-two-thirds.column,
   .offset-by-two-thirds.columns {
     margin-left: 69.3333333333%;
   }
+
   .offset-by-one-half.column,
   .offset-by-one-half.columns {
     margin-left: 52%;
   }
+
 }
+
 
 /* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+  html is set to 62.5% so that all the REM measurements throughout Skeleton
+  are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
-  background-color: grey;
-   min-height: 100%;
 }
+
+
 
 body {
-  font-size: 1.4em;
-  line-height: 1.4;
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  background-color: #0a1625;
-  width: 100%;
-  margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.342) 0 0 3px 3px;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  background-color: #333;
   min-height: 100vh;
+  min-width: 350px;
+}
+.links{
+  margin: auto;
+  text-align: center;
+}
+.footer {
+  border-top: 1px solid white;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+  background-color: #333;
+  height: 100px;
+  color: white;
+  text-align: center;
+  display: block;
+
 }
 
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.logoContainer {
+  text-align: center;
+  margin-top: 130px;
+  color: white;
 
+}
+
+.newLogo {
+
+  filter: drop-shadow(3px 3px 1px rgba(255, 255, 255, 0.146));
+
+  transition-duration: .15s;
+
+  transition-property: all;
+
+  transition-timing-function: ease-in;
+
+}
+
+.newLogo:hover {
+
+
+  transition-duration: 1s;
+
+  
+
+
+  transition-timing-function: ease-in;
+
+
+  transform: rotate3d(10, 10, 1, 180deg);
+
+
+
+
+  filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.453));
+
+
+  cursor: pointer;
+
+
+}
+
+
+
+
+
+
+/* Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1,
 h2,
 h3,
@@ -349,33 +720,33 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.0rem;
   line-height: 1.2;
-  letter-spacing: -0.1rem;
+  letter-spacing: -.1rem;
 }
 
 h2 {
   font-size: 3.6rem;
   line-height: 1.25;
-  letter-spacing: -0.1rem;
+  letter-spacing: -.1rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 3.0rem;
   line-height: 1.3;
-  letter-spacing: -0.1rem;
+  letter-spacing: -.1rem;
 }
 
 h4 {
   font-size: 2.4rem;
   line-height: 1.35;
-  letter-spacing: -0.08rem;
+  letter-spacing: -.08rem;
 }
 
 h5 {
   font-size: 1.8rem;
   line-height: 1.5;
-  letter-spacing: -0.05rem;
+  letter-spacing: -.05rem;
 }
 
 h6 {
@@ -385,23 +756,27 @@ h6 {
 }
 
 /* Larger than phablet */
-
 @media (min-width: 550px) {
   h1 {
-    font-size: 5rem;
+    font-size: 5.0rem;
   }
+
   h2 {
     font-size: 4.2rem;
   }
+
   h3 {
     font-size: 3.6rem;
   }
+
   h4 {
-    font-size: 3rem;
+    font-size: 3.0rem;
   }
+
   h5 {
     font-size: 2.4rem;
   }
+
   h6 {
     font-size: 1.5rem;
   }
@@ -411,20 +786,25 @@ p {
   margin-top: 0;
 }
 
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Links
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #ccc;
+  color: #ffffff;
+  font-weight: bolder;
+  cursor: pointer;
+
 }
 
 a:hover {
-  color: #ffffff;
+  color: #000000;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Buttons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
 button,
 input[type="submit"],
@@ -433,13 +813,12 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #ccc;
-
+  color: #555;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -460,10 +839,9 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #ffffff;
+  color: #333;
   border-color: #888;
-  outline: none;
-  box-shadow: inset rgba(0, 0, 0, 0.446) 0 0 10px 4px;
+  outline: 0;
 }
 
 .button.button-primary,
@@ -471,9 +849,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #fff;
-  background-color: #33c3f0;
-  border-color: #33c3f0;
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0;
 }
 
 .button.button-primary:hover,
@@ -486,14 +864,14 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #fff;
-  background-color: #1eaedb;
-  border-color: #1eaedb;
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
 }
 
-/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Forms
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -507,14 +885,13 @@ select {
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  border: 1px solid #d1d1d1;
+  border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
-
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -543,14 +920,14 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33c3f0;
+  border: 1px solid #33C3F0;
   outline: 0;
 }
 
 label,
 legend {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   font-weight: 600;
 }
 
@@ -564,17 +941,20 @@ input[type="radio"] {
   display: inline;
 }
 
-label > .label-body {
+label>.label-body {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   font-weight: normal;
 }
 
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Lists
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside;
+  list-style: none;
+
+
+
 }
 
 ol {
@@ -597,57 +977,45 @@ ol ul {
 
 li {
   margin-bottom: 1rem;
-  display: inline-flex;
-}
-.clinks {
-  margin-top: 1em;
-  padding: 2px;
-  font-size: smaller;
-  border: 1px solid rgba(204, 204, 204, 0.234);
-  border-radius: 2px;
-  margin: 2px;
+  display: inline-block;
+
 }
 
-.clinks:hover {
-  color: rgb(145, 145, 145);
-}
-.links {
-  border-top: rgba(204, 204, 204, 0.26) 1px solid;
+.asideList li {
+  display: block;
   text-align: center;
-  line-height: 1px;
-  padding: 0.5em;
-  margin: auto;
-  width: 70%;
-  margin-bottom: -1em;
+  color: white;
+
 }
+
 
 /* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
-  padding: 0.2rem 0.5rem;
-  margin: 0 0.2rem;
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #f1f1f1;
-  border: 1px solid #e1e1e1;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
   border-radius: 4px;
 }
 
-pre > code {
+pre>code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre;
 }
 
-/* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+
+/* Tables
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #E1E1E1;
 }
 
 th:first-child,
@@ -660,9 +1028,9 @@ td:last-child {
   padding-right: 0;
 }
 
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Spacing
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
   margin-bottom: 1rem;
@@ -684,12 +1052,12 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
 }
 
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Utilities
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
   width: 100%;
   box-sizing: border-box;
@@ -708,21 +1076,21 @@ form {
   float: left;
 }
 
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Misc
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid #E1E1E1;
 }
 
+
 /* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
-
 .container:after,
 .row:after,
 .u-cf {
@@ -731,14 +1099,147 @@ hr {
   clear: both;
 }
 
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Media Queries
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
+  Note: The best way to structure the use of media queries is to create the queries
+  near the relevant code. For example, if you wanted to change the styles for buttons
+  on small devices, paste the mobile query code up in the buttons section and style it
+  there.
+  */
+
+@media (min-width: 200px) {
+
+  aside {
+    width: 100%;
+
+  }
+
+  .mainText {
+    font-size: 4vw;
+
+  }
+
+}
 
 /* Larger than mobile */
+@media (min-width: 400px) {
+  .headerTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .artHeader {
+    margin-top: 17em;
+
+  }
+
+  aside {
+    width: 100%;
+
+  }
+
+  .mainText {
+    font-size: 16px;
+
+  }
+
+
+  .mainText{
+    width: 100%;
+
+  }
+
+
+}
+
+
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 600px) {
+  .headerTitle {
+    text-align: center;
+  }
+
+  .artHeader {
+    margin-top: 17em;
+
+  }
+
+  .mattAvitar {
+    width: 100%;
+
+
+  }
+
+  aside {
+    width: 100%;
+
+   
+
+  }
+  .mainText{
+    width: 100%;
+
+  }
+
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .headerTitle {
+    text-align: center;
+
+  }
+
+  .artHeader {
+    margin-top: 14em;
+
+  }
+
+  .mattAvitar {
+    max-width: 100%;
+
+   
+  }
+  .mainText{
+    width: 100%;
+
+  }
+
+
+
+}
+
+/* Larger than desktop */
+@media (min-width: 960px) {
+  .artHeader {
+    margin-top: 10em;
+
+  }
+
+  aside {
+    width: 50%;
+
+  }
+  .mainText{
+    width: 50%;
+
+  }
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .artHeader {
+    margin-top: 10em;
+
+  }
+
+  aside {
+    width: 50%;
+
+  }
+}

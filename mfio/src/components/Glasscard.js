@@ -1,61 +1,59 @@
 import React from 'react';
-import profile from '../images/mattavi.jpg';
+import profile from '../images/facegif.gif';
 import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 
 const Container = styled(animated.div)`
 display: inline-block;
 border-radius: 3px;
-padding: 1em;
+filter: brightness(20);
 z-index: 1;
-background-color: #dbebff10;
-position: relative;
-backdrop-filter: blur(10px);
-border: 2px solid transparent;
-background-clip: border-box;
-cursor: pointer;
-box-shadow: inset rgba(209, 209, 209, 0.1) 0 0 30px 10px;
+
+transition: box-shadow 0.5s;
+will-change: transform;
+margin-top:2em;
+vertical-align: middle;
 }
 
 `;
 
 const StyledImg = styled.img`
-width: 100%;
-height: 100%;
-max-width: 100%;
-max-height: 100%;
-border-radius: 100%;
 display: block;
-margin-bottom: 1em;
-border: 1px solid #ccc;
+margin: auto;
+max-width: 90%;
+
+border-radius:100%;
+border: 1px solid white; 
+vertical-align: middle;
+
+
+
+  
 
 
 `;
 
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1]
-const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
 
 const GlassCard = () => {
-    const [props, set] = useSpring(() => ({ xys: [0, 0, 1] , config: config.default}))
+    const [props, set] = useSpring(() => ({
+        xys: [0, 0, 1],
+        config: { mass: 5, tension: 350, friction: 40 }
+      }));
     return (
+
+        
         <Container
-            onMouseMove={({clientX: x, clientY: y}) => (set({xys: calc(x, y)}))}
-            onMouseLeave={() => set({xys:[1,0,1]})}
-            style={{
-                transform: props.xys.interpolate(trans)
-            }}
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+      onMouseLeave={() => set({ xys: [0, 0, 1] })}
+      style={{ transform: props.xys.to(trans) }}
         >
-            <StyledImg src={profile} />
-            <div className="name-plate">
-          <p>
-            <strong>Matthieu</strong> Felker
-          </p>
-          <div className="title">
-          <p>Web Developer and Graphic Artist</p>
-        </div>
-        </div>
-      
+            <StyledImg className='mattAvitar' src={profile} />
+          
+
         </Container>
     );
 }
