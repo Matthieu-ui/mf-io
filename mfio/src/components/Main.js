@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import avi from "../images/facegif.gif";
+
 //import Card from "./Links";
 import GlassCard from "./Glasscard";
 
 class Main extends Component {
   render() {
     return (
+
       <div>
         <div id="mainer">
           <div className="mainContainer">

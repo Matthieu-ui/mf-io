@@ -5,9 +5,12 @@
 }
 
 .App {
-  height: 100vh;
-  width: 100%;
+
   overflow: hidden;
+}
+
+.bioD {
+  width: 80%;
 }
 
 nav {
@@ -39,22 +42,21 @@ nav {
 .nav-links {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   width: 100%;
   position: absolute;
   top: 10vh;
   right: 0;
-
   background-color: #333;
   transition: all ease-in 0.3s;
-  transform: translateX(200%);
+  transform: translateX(100%);
   z-index: 99999;
-  border-bottom: 1px solid white;
+
 }
 
 
 .nav-links li {
+  padding: 60px;
   list-style: none;
   /* opacity: 0; */
   transition: all 1s linear;
@@ -67,6 +69,8 @@ nav {
   text-decoration: none;
   line-height: 10px;
 }
+
+
 
 .burger {
   /* display: none; */
@@ -143,25 +147,26 @@ p {
   float: right;
 }
 
-.footOne{
+.footOne {
+  border-top: 1px solid white;
   font-size: small;
-  margin-top: 1em;
-  margin-bottom: -17px;
-}
-
-.footerIcon{
-  font-size:20px;
-
-}
-
-
-
-.clinks{
   padding: 1em;
-  font-size:20px;
-
-  
 }
+
+.footerIcon {
+  font-size: 20px;
+
+}
+
+
+
+.clinks {
+  padding: 1em;
+  font-size: 20px;
+
+
+}
+
 .header {
   background-color: #333;
   position: absolute;
@@ -176,16 +181,14 @@ p {
 
 
 
-.artHeader {
-  margin-top: 17em;
+.sectionHeader {
+  margin-top: 1em;
+  text-align: center;
 
 }
 
 .portfolioMenu {
   text-align: center;
-
-
-
 }
 
 .portfolioMenu a {
@@ -194,9 +197,13 @@ p {
 
 }
 
+.portfolioNav {
+  margin: 1em;
+
+}
+
 .portfolioMenu a:hover {
-  color: rgba(255, 255, 255, 0.671);
-  text-decoration: underline;
+
   transition: 1s ease;
 
 }
@@ -240,12 +247,15 @@ p {
 .navLink {
   transition: .50s ease;
   text-decoration: none;
-  padding: 2vw;
+  padding: 1vw;
 }
 
 .navLink:hover {
-  color: rgba(255, 255, 255, 0.671);
-  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  background-color: #ffffff20;
+  border-radius: 50px;
+
+
 
 }
 
@@ -320,14 +330,14 @@ p {
 
 }
 
-.aviBox{
+.aviBox {
   margin: 0 auto;
   display: table;
-  
+
 
 }
 
-.mattAvitar{
+.mattAvitar {
   max-width: 100%;
   min-width: 200px;
 
@@ -341,7 +351,7 @@ p {
 }
 
 
-.mainContainer{
+.mainContainer {
   text-align: left;
   width: 100%;
 
@@ -349,10 +359,10 @@ p {
 
 
 
-.mainText{
+.mainText {
 
   width: 100%;
-  display:block;
+  display: block;
   margin: auto;
 }
 
@@ -410,7 +420,7 @@ p {
 .gridSection {
   background-color: #333;
   background-size: 90px 90px;
-  height: fit-content;
+  height: 100vh;
   background-position: center;
   background-image:
     linear-gradient(to right, rgba(128, 128, 128, 0.129) 1px, transparent 1px),
@@ -420,7 +430,7 @@ p {
 
 
 #mainer {
-  margin-top: 200px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,7 +443,7 @@ aside {
   float: right;
   width: 50%;
   font-size: smaller;
- 
+
 
 }
 
@@ -626,6 +636,7 @@ aside {
   are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
+
 }
 
 
@@ -638,23 +649,40 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   background-color: #333;
-  min-height: 100vh;
+  height: 100%;
   min-width: 350px;
+  overflow-x: hidden;
 }
-.links{
+
+.links {
   margin: auto;
   text-align: center;
 }
+.chatIcon{
+ font-size: 10vw;
+ color: white;
+ margin-top: 50px;
+
+}
+.chatText{
+  text-align: center;
+
+
+}
+
+.contactContainer{
+  text-align: center;
+}
 .footer {
-  border-top: 1px solid white;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 70px;
+
   background-color: #333;
-  height: 100px;
   color: white;
   text-align: center;
   display: block;
+  position: absolute;
+  bottom: -82px;
+  left: 0;
+  right: 0;
 
 }
 
@@ -680,17 +708,12 @@ body {
 .newLogo:hover {
 
 
-  transition-duration: 1s;
+  transition-duration: .2s;
 
-  
+
 
 
   transition-timing-function: ease-in;
-
-
-  transform: rotate3d(10, 10, 1, 180deg);
-
-
 
 
   filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.453));
@@ -717,6 +740,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
+  color: white;
 }
 
 h1 {
@@ -797,10 +821,15 @@ a {
 }
 
 a:hover {
-  color: #000000;
+
+
   font-weight: bolder;
   cursor: pointer;
+
+
 }
+
+
 
 
 /* Buttons
@@ -839,7 +868,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
+  color: rgb(255, 255, 255);
   border-color: #888;
   outline: 0;
 }
@@ -1034,6 +1063,8 @@ td:last-child {
 button,
 .button {
   margin-bottom: 1rem;
+  background: #0b4171;
+  color: white;
 }
 
 input,
@@ -1130,10 +1161,7 @@ hr {
     margin-bottom: 20px;
   }
 
-  .artHeader {
-    margin-top: 17em;
 
-  }
 
   aside {
     width: 100%;
@@ -1146,7 +1174,7 @@ hr {
   }
 
 
-  .mainText{
+  .mainText {
     width: 100%;
 
   }
@@ -1162,10 +1190,7 @@ hr {
     text-align: center;
   }
 
-  .artHeader {
-    margin-top: 17em;
 
-  }
 
   .mattAvitar {
     width: 100%;
@@ -1176,10 +1201,11 @@ hr {
   aside {
     width: 100%;
 
-   
+
 
   }
-  .mainText{
+
+  .mainText {
     width: 100%;
 
   }
@@ -1194,17 +1220,14 @@ hr {
 
   }
 
-  .artHeader {
-    margin-top: 14em;
-
-  }
 
   .mattAvitar {
     max-width: 100%;
 
-   
+
   }
-  .mainText{
+
+  .mainText {
     width: 100%;
 
   }
@@ -1215,16 +1238,14 @@ hr {
 
 /* Larger than desktop */
 @media (min-width: 960px) {
-  .artHeader {
-    margin-top: 10em;
 
-  }
 
   aside {
     width: 50%;
 
   }
-  .mainText{
+
+  .mainText {
     width: 50%;
 
   }
@@ -1233,10 +1254,7 @@ hr {
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-  .artHeader {
-    margin-top: 10em;
 
-  }
 
   aside {
     width: 50%;

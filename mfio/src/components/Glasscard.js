@@ -1,7 +1,7 @@
 import React from 'react';
 import profile from '../images/facegif.gif';
 import styled from 'styled-components';
-import { useSpring, animated, config } from 'react-spring';
+import { useSpring, animated} from 'react-spring';
 
 const Container = styled(animated.div)`
 display: inline-block;

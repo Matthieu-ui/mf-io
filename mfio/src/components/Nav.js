@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+
 import cn from "classnames";
 import logo from '../images/pxArt(3).png'
+
+
 
 class Nav extends Component{
   state = {
@@ -15,20 +17,17 @@ class Nav extends Component{
         <nav>
           <div className="wrap">
           
-            <img className="newLogo" src={logo}></img>
+            <img className="newLogo" src={logo} alt="Matts logo"></img>
 
             <ul class="navMenu">
                 <li class="nameItem">
-                  <a class="navLink" href="grid.html">Home</a>
+                  <a class="navLink" href="/">Home</a>
                 </li>
                 <li class="nameItem">
-                  <a class="navLink" href="#">About</a>
+                  <a class="navLink" href="Portfolio">Portfolio</a>
                 </li>
                 <li class="nameItem">
-                  <a class="navLink" href="art.html">Portfolio</a>
-                </li>
-                <li class="nameItem">
-                  <a class="navLink" href="#">Contact</a>
+                  <a class="navLink" href="Contact">Contact</a>
                 </li>
               </ul>
 
@@ -42,28 +41,21 @@ class Nav extends Component{
                   ["open-item"]: showNavMobile
                 })}
               >
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li
                 className={cn({
                   ["open-item"]: showNavMobile
                 })}
               >
-                <a href="#">Contacts</a>
+                <a href="Contact">Contact</a>
               </li>
               <li
                 className={cn({
                   ["open-item"]: showNavMobile
                 })}
               >
-                <a href="#">Projects</a>
-              </li>
-              <li
-                className={cn({
-                  ["open-item"]: showNavMobile
-                })}
-              >
-                <a href="#">About</a>
+                <a href="Portfolio">Portfolio</a>
               </li>
             </ul>
             <div
