@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 class MiniNav extends Component {
@@ -10,15 +11,15 @@ class MiniNav extends Component {
                 <div class="portfolioMenu">
                     <div class="portfolioMenu">
                         <ul class="portfolioNav">
-                            <li class="nameItem">
+                            <Link to='/Development' class="nameItem">
                                 <a class="navLink" href="Development">Development</a>
-                            </li>
-                            <li class="nameItem">
+                            </Link>
+                            <Link to="/Design" class="nameItem">
                                 <a class="navLink" href="Design">Design</a>
-                            </li>
-                            <li class="nameItem">
+                            </Link>
+                            <Link to='/Portfolio' class="nameItem">
                                 <a class="navLink" href="Portfolio">Collections</a>
-                            </li>
+                            </Link>
 
                         </ul>
                     </div>
