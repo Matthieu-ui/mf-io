@@ -32,36 +32,26 @@ class Nav extends Component{
               </ul>
 
             <ul
-              className={cn("nav-links", {
-                ["open"]: showNavMobile
-              })}
+              className={cn}
             >
               <li
-                className={cn({
-                  ["open-item"]: showNavMobile
-                })}
+                className={cn}
               >
                 <a href="/">Home</a>
               </li>
               <li
-                className={cn({
-                  ["open-item"]: showNavMobile
-                })}
+                className={cn}
               >
                 <a href="Contact">Contact</a>
               </li>
               <li
-                className={cn({
-                  ["open-item"]: showNavMobile
-                })}
+                className={cn}
               >
                 <a href="Portfolio">Portfolio</a>
               </li>
             </ul>
             <div
-              className={cn("burger", {
-                ["toggle"]: showNavMobile
-              })}
+              className={cn("burger")}
               
               onClick={() =>
                 this.setState({ showNavMobile: !this.state.showNavMobile })
