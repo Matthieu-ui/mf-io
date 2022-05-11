@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import cn from "classnames";
 import logo from '../images/pxArt(3).png'
 
@@ -20,15 +20,15 @@ class Nav extends Component{
             <img className="newLogo" src={logo} alt="logo"></img>
 
             <ul class="navMenu">
-                <li class="nameItem">
+                <Link class="nameItem">
                   <a class="navLink" href="/">Home</a>
-                </li>
-                <li class="nameItem">
+                </Link>
+                <Link class="nameItem">
                   <a class="navLink" href="Portfolio">Portfolio</a>
-                </li>
-                <li class="nameItem">
+                </Link>
+                <Link class="nameItem">
                   <a class="navLink" href="Contact">Contact</a>
-                </li>
+                </Link>
               </ul>
 
             <ul
