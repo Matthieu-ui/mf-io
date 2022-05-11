@@ -25,7 +25,7 @@ class Links extends Component {
 
 
             <li className="clinks">
-              <a href="https://github.com/Matthieu-ui"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
+              <a href="/https://github.com/Matthieu-ui"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
             </li>
 
           </ul>
