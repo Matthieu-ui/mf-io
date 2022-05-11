@@ -17,7 +17,7 @@ class Nav extends Component{
         <nav>
           <div className="wrap">
           
-            <img className="newLogo" src={logo} alt="Matts logo"></img>
+            <img className="newLogo" src={logo} alt="logo"></img>
 
             <ul class="navMenu">
                 <li class="nameItem">
@@ -32,26 +32,36 @@ class Nav extends Component{
               </ul>
 
             <ul
-              className={cn}
+              className={cn("nav-links", {
+                ["open"]: showNavMobile
+              })}
             >
               <li
-                className={cn}
+                className={cn({
+                  ["open-item"]: showNavMobile
+                })}
               >
                 <a href="/">Home</a>
               </li>
               <li
-                className={cn}
+                className={cn({
+                  ["open-item"]: showNavMobile
+                })}
               >
                 <a href="Contact">Contact</a>
               </li>
               <li
-                className={cn}
+                className={cn({
+                  ["open-item"]: showNavMobile
+                })}
               >
                 <a href="Portfolio">Portfolio</a>
               </li>
             </ul>
             <div
-              className={cn("burger")}
+              className={cn("burger", {
+                ["toggle"]: showNavMobile
+              })}
               
               onClick={() =>
                 this.setState({ showNavMobile: !this.state.showNavMobile })
