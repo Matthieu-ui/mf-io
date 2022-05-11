@@ -59,8 +59,7 @@ nav {
   padding: 60px;
   list-style: none;
   /* opacity: 0; */
-  transition: all 1s linear;
-  transform: translateX(0);
+
 }
 
 .nav-links a {
@@ -68,6 +67,7 @@ nav {
   letter-spacing: 3px;
   text-decoration: none;
   line-height: 10px;
+  margin: 2em;
 }
 
 

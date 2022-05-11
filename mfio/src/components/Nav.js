@@ -5,7 +5,7 @@ import logo from '../images/pxArt(3).png'
 
 
 
-class Nav extends Component{
+class Nav extends Component {
   state = {
     showNavMobile: false
   };
@@ -16,53 +16,53 @@ class Nav extends Component{
       <div className="nav">
         <nav>
           <div className="wrap">
-          
+
             <img className="newLogo" src={logo} alt="logo"></img>
 
             <ul class="navMenu">
-                <Link class="nameItem">
-                  <a class="navLink" href="/">Home</a>
-                </Link>
-                <Link class="nameItem">
-                  <a class="navLink" href="Portfolio">Portfolio</a>
-                </Link>
-                <Link class="nameItem">
-                  <a class="navLink" href="Contact">Contact</a>
-                </Link>
-              </ul>
+              <Link to='/' class="nameItem"><a class="navLink">Home</a></Link>
+              <Link to='/Portfolio' class="nameItem"><a class="navLink">Portfolio</a></Link>
+              <Link to='/Contact' class="nameItem"><a class="navLink">Contact</a></Link>
+            </ul>
 
             <ul
+            
               className={cn("nav-links", {
                 ["open"]: showNavMobile
               })}
             >
-              <li
+              <Link to='/' 
                 className={cn({
                   ["open-item"]: showNavMobile
                 })}
               >
-                <a href="/">Home</a>
-              </li>
-              <li
+              <a class="navLink">Home</a>
+              </Link>
+
+              <Link to='/Portfolio'
+              className={cn({
+                ["open-item"]: showNavMobile
+              })}
+            >
+            <a class="navLink">Portfolio</a>
+            </Link>
+
+
+              <Link to='/Contact' 
                 className={cn({
                   ["open-item"]: showNavMobile
                 })}
               >
-                <a href="Contact">Contact</a>
-              </li>
-              <li
-                className={cn({
-                  ["open-item"]: showNavMobile
-                })}
-              >
-                <a href="Portfolio">Portfolio</a>
-              </li>
+              <a class="navLink">Contact</a>
+              </Link>
+
+
             </ul>
             <div
               className={cn("burger", {
                 ["toggle"]: showNavMobile
               })}
-              
+
               onClick={() =>
                 this.setState({ showNavMobile: !this.state.showNavMobile })
               }
